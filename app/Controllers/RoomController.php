@@ -2,13 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\RoomModel;
+use CodeIgniter\RESTful\ResourceController;
 
-class RoomController extends BaseController
+class RoomController extends ResourceController
 {
-    public function index()
-    {
-        //
-    }
+    protected $modelName = RoomModel::class;
+    protected $format = 'json';
 }
